@@ -89,6 +89,6 @@ try {
 }
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('sw.js').catch(error => {
-    console.log('could not register the service worker');
+    console.log('could not register the service worker', error);
   });
 }

@@ -87,3 +87,8 @@ try {
   console.log('failed', err);
   document.body.innerHTML = "Need ES6, mate!";
 }
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js').catch(error => {
+    console.log('could not register the service worker');
+  });
+}

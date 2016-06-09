@@ -1,22 +1,22 @@
 class PasCeSoir {
   constructor() {
     this.pasCeSoir = {
-      path: 'assets/pas-ce-soir.wav',
+      path: 'assets/pas-ce-soir.mp3',
       node: document.querySelector('.action--pas-ce-soir'),
       buffer: null,
     };
     this.pasMaintenant = {
-      path: 'assets/pas-maintenant.wav',
+      path: 'assets/pas-maintenant.mp3',
       node: document.querySelector('.action--pas-maintenant'),
       buffer: null,
     };
     this.pasAujourdhui = {
-      path: 'assets/pas-aujourdhui.wav',
+      path: 'assets/pas-aujourdhui.mp3',
       node: document.querySelector('.action--pas-aujourdhui'),
       buffer: null,
     };
     this.touchePas = {
-      path: 'assets/touche-pas.wav',
+      path: 'assets/touche-pas.mp3',
       node: document.querySelector('.action--touche-pas'),
       buffer: null,
     };
@@ -71,10 +71,19 @@ class PasCeSoir {
     if (!this.context) return;
     if (!action.buffer) return;
 
+    action.node.classList.add('playing');
     const source = this.context.createBufferSource();
     source.buffer = action.buffer;
     source.connect(this.context.destination);
+    source.addEventListener('ended', () => {
+      action.node.classList.remove('playing');
+    });
     source.start(0);
   }
 }
-new PasCeSoir();
+try {
+  new PasCeSoir();
+} catch (err) {
+  console.log('failed', err);
+  document.body.innerHTML = "Need ES6, mate!";
+}

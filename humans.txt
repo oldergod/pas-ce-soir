@@ -1,5 +1,5 @@
 /* TEAM */
-Name: Benoit Quenaudon
+Name: Benoît Quenaudon
 Twitter: https://twitter.com/oldergod
 Github: https://github.com/oldergod
 Location: Kobe, Japan

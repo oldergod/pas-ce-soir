@@ -5,7 +5,7 @@
   "background_color": "#ffffff",
   "display": "standalone",
   "Scope": "/pas-ce-soir/",
-  "start_url": "/pas-ce-soir/",
+  "start_url": "/?src=manifest",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",

@@ -1,5 +1,5 @@
 var CACHE_NAME = 'pasCeSoir';
-var CACHE_VERSION = '0.0.1';
+var CACHE_VERSION = '0.0.2';
 
 self.oninstall = function(event) {
   const urls = [

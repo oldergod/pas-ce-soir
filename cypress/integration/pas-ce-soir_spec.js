@@ -35,7 +35,7 @@ describe('Pas ce soir !', function() {
         .contains('Touche pas').should('have.class', 'action--touche-pas');
   });
 
-  it('assert click on actions', function() {
+  xit('assert click on actions', function() {
     cy
       .get('.action-container').children()
         .click({multiple: true})

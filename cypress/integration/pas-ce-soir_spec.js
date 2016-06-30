@@ -32,15 +32,16 @@ describe('Pas ce soir !', function() {
       .get('.action-container')
         .contains('Pas aujourd\'hui').should('have.class', 'action--pas-aujourdhui')
       .get('.action-container')
-        .contains('Touche pas').should('have.class', 'action--touche-pas')
+        .contains('Touche pas').should('have.class', 'action--touche-pas');
   });
 
   it('assert click on actions', function() {
-    cy.get('.action-container').children()
-      .click({multiple: true});
-    cy.get('.action-container').children('.playing')
-      .should('have.length', 4);
-    cy.get('.action-container').children()
-      .wait(3000).should('not.have.class', 'playing');
+    cy
+      .get('.action-container').children()
+        .click({multiple: true});
+      .get('.action-container').children('.playing')
+        .should('have.length', 4);
+      .get('.action-container').children()
+        .wait(3000).should('not.have.class', 'playing');
   });
 });

@@ -72,13 +72,18 @@ class PasCeSoir {
     if (!action.buffer) return;
 
     action.node.classList.add('playing');
-    const source = this.context.createBufferSource();
-    source.buffer = action.buffer;
-    source.connect(this.context.destination);
-    source.addEventListener('ended', () => {
+    try {
+      const source = this.context.createBufferSource();
+      source.buffer = action.buffer;
+      source.connect(this.context.destination);
+      source.addEventListener('ended', () => {
+        action.node.classList.remove('playing');
+      });
+      source.start(0);
+    } catch (e) {
+      console.log('something screwed trying playing sound', e);
       action.node.classList.remove('playing');
-    });
-    source.start(0);
+    }
   }
 }
 try {

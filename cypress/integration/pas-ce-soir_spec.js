@@ -38,9 +38,9 @@ describe('Pas ce soir !', function() {
   it('assert click on actions', function() {
     cy
       .get('.action-container').children()
-        .click({multiple: true});
+        .click({multiple: true})
       .get('.action-container').children('.playing')
-        .should('have.length', 4);
+        .should('have.length', 4)
       .get('.action-container').children()
         .wait(3000).should('not.have.class', 'playing');
   });

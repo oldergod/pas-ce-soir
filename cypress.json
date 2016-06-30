@@ -1,3 +1,4 @@
 {
-  "baseUrl": "http://127.0.0.1:8887/src/"
+  "baseUrl": "http://localhost:8888/src",
+  "projectId": "2700ea2f-37cd-4658-bcc2-d4ca4e8fbd36"
 }

@@ -35,13 +35,16 @@ describe('Pas ce soir !', function() {
         .contains('Touche pas').should('have.class', 'action--touche-pas');
   });
 
-  xit('assert click on actions', function() {
-    cy
-      .get('.action-container').children()
-        .click({multiple: true})
-      .get('.action-container').children('.playing')
-        .should('have.length', 4)
-      .get('.action-container').children()
-        .wait(3000).should('not.have.class', 'playing');
+  it.skip('assert click on actions', function() {
+    function assertClickOnAction(actionClassName) {
+      cy.get(`.${actionClassName}`).click().should('have.class', 'playing').then(function($el){
+        cy.wrap($el, {timeout: 5000}).should('not.have.class', 'playing')
+      })
+    }
+
+    ['action--pas-ce-soir',
+     'action--pas-maintenant',
+     'action--pas-aujourdhui',
+     'action--touche-pas'].forEach(actionClassName => assertClickOnAction(actionClassName));
   });
 });

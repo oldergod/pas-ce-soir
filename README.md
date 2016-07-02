@@ -13,5 +13,5 @@ Pour les amoureux qui ne s'aiment plus.
 [deps-url]: https://david-dm.org/oldergod/pas-ce-soir
 [dev-deps-image]: https://david-dm.org/oldergod/pas-ce-soir/dev-status.svg
 [dev-deps-url]: https://david-dm.org/oldergod/pas-ce-soir#info=devDependencies&view=list
-[code-climate-image]: https://codeclimate.com/github/boennemann/badges.svg
-[code-climate-url]: https://codeclimate.com/github/boennemann/badges
+[code-climate-image]: https://codeclimate.com/github/oldergod/pas-ce-soir.svg
+[code-climate-url]: https://codeclimate.com/github/oldergod/pas-ce-soir
